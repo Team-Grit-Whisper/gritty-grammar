@@ -1,10 +1,7 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import './App.css';
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <p className="font-extrabold">Gritty Grammar</p>
