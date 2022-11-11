@@ -6,18 +6,18 @@ This is Gritty Grammar frontend bootstrapped with [`react vite`](https://vitejs.
 Make sure you have nodejs installed by running the following command:
 
 ```bash
-node -v
+node --version
 ```
 If the output is not the version of your nodejs installation, install nodejs from [here](https://nodejs.org/en/download/)
 
-Then install the dependencies after cloning the project please with npm:
+Then install the dependencies after cloning the project *please use npm*:
 
 ```bash
 npm install
 ```
 
 ## Start the server
-Then, start up the project with:
+Then, start up the application.
 
 ```bash
 npm run dev
@@ -25,15 +25,29 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### **Building**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Editor setup
 
+We're using eslint for js linting, and prettier for code formating, make sure you install eslint and prettier plugins in your editor so you can
+see linting errors as you code and have your code formatted on save by prettier. If formatOnSave doesn't work please google how to set up
+format on save for the eslint & prettier plugins in your editor 🙃
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All pull requests should be made to the `dev branch` addequate commit message must be use and has been enforced throght commitlint your commit messages should be in this form `{commit type}: {commit message}` eg `ci: setup eslint and prettier to ensure code linting and formatting` refer to our commit lint file [here](commitlint.config.js)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Note pre-commit `npm run lint` is run.**
+
+```bash
+npm  run lint # to lint only js,jsx files # in project directory
+
+npm  run prettify # to prettify files # in project directory
+```
+
+you can also lint for all files in the repo by running that command in the root folder.
+
